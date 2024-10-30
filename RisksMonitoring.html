@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Risk monitoring</title>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/RiskManagenent.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">  
+</head>
+
+<body id="page-top">
+    <nav class="navbar">
+    <div class="d-flex align-items-center justify-content-center">
+        <ul class="navbar">
+            <li class="nav-item">
+                <a class="nav-link" href="IdentificationOfRisks.html">
+                    <div>
+                        <span>Ідентифікація ризиків</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="RisksAnalysis.html">
+                    <div>
+                        <span>Аналіз ризиків</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="RisksPlanning.html">
+                    <div>
+                        <span>Планування ризиків</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link">
+                    <div>
+                        <span style="color: rgb(35, 69, 25);">Моніторинг ризиків</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    
+    <div class="tabs">
+        <button class="tablink" onclick="openPage('req-monitoring-content1', this)" id="defaultOpen">Результуюче оцінювання ризиків</button>
+        <button class="tablink" onclick="openPage('req-monitoring-content2', this)">Результуюча величина ризиків</button>
+    </div>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content" class="text-center">
+
+            <div id="req-monitoring-content1" class="tabcontent">
+                <div class="ml-4" style="width: 100%;">
+                    <div class="mt-2 mb-4 justify-content-left pt-2">
+                        
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:5%">№</th>
+                                <th style="width:40%">Можливі ризикові події</th>
+                                <th style="width:5%">per1</th>
+                                <th style="width:5%">per2</th>
+                                <th style="width:5%">per3</th>
+                                <th style="width:5%">per4</th>
+                                <th style="width:5%">per5</th>
+                                <th style="width:5%">per6</th>
+                                <th style="width:5%">per7</th>
+                                <th style="width:5%">per8</th>
+                                <th style="width:5%">per9</th>
+                                <th style="width:5%">per10</th>
+                                <th style="width:5%; background-color: #e9f9eb; ">ERRER</th>
+                                </tr>
+                                <tr>
+                                    <td>tR1</td>
+                                    <td>Затримки у постачанні обладнання, необхідного для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR2</td>
+                                    <td>Затримки у постачанні інструментальних засобів, необхідних для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR3</td>
+                                    <td>Небажання команди виконавців ПЗ використовувати інструментальні засоби для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR4</td>
+                                    <td>Відмова команди виконавців від CASE-засобів розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR5</td>
+                                    <td>Формування запитів на більш потужні інструментальні засоби розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR6</td>
+                                    <td>Недостатня продуктивність баз(и) даних для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR7</td>
+                                    <td>Програмні компоненти, які використовують повторно в ПЗ, мають дефекти та обмежені функціональні можливості</td>
+                                </tr>
+                                <tr>
+                                    <td>tR8</td>
+                                    <td>Неефективність програмного коду, згенерованого CASE-засобами розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR9</td>
+                                    <td>Неможливість інтеграції CASE-засобів з іншими інструментальними засобами для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR10</td>
+                                    <td>Швидкість виявлення дефектів у програмному коді є нижчою від раніше запланованих термінів</td>
+                                </tr>
+                                <tr>
+                                    <td>tR11</td>
+                                    <td>Поява дефектних системних компонент, які використовують для розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR1</td>
+                                    <td>Недооцінювання витрат на реалізацію програмного проекту (надмірно низька вартість)</td>
+                                </tr>
+                                <tr>
+                                    <td>cR2</td>
+                                    <td>Переоцінювання витрат на реалізацію програмного проекту (надмірно висока вартість)</td>
+                                </tr>
+                                <tr>
+                                    <td>cR3</td>
+                                    <td>Фінансові ускладнення у компанії-замовника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR4</td>
+                                    <td>Фінансові ускладнення у компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR5</td>
+                                    <td>Збільшення бюджету програмного проекта з ініціативи компанії-розробника ПЗ під час його реалізації</td>
+                                </tr>
+                                <tr>
+                                    <td>cR6</td>
+                                    <td>Збільшення бюджету програмного проекта з ініціативи компанії-розробника ПЗ під час його реалізації</td>
+                                </tr>
+                                <tr>
+                                    <td>cR7</td>
+                                    <td>Висока вартість виконання повторних робіт, необхідних для зміни вимог до ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR8</td>
+                                    <td>Реорганізація структурних підрозділів у компанії-замовника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR9</td>
+                                    <td>Реорганізація команди виконавців у компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR1</td>
+                                    <td>Зміни графіка виконання робіт з боку замовника чи виконавця</td>
+                                </tr>
+                                <tr>
+                                    <td>pR2</td>
+                                    <td>Порушення графіка виконання робіт у компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR3</td>
+                                    <td>Потреба зміни користувацьких вимог до ПЗ з боку компанії-замовника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR4</td>
+                                    <td>Потреба зміни функціональних вимог до ПЗ з боку компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR5</td>
+                                    <td>Потреба виконання великої кількості повторних робіт, необхідних для зміни вимог до ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR6</td>
+                                    <td>Недооцінювання тривалості етапів реалізації програмного проекту з боку компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR7</td>
+                                    <td>Переоцінювання тривалості етапів реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>pR8</td>
+                                    <td>Остаточний розмір ПЗ перевищує заплановані його характеристики</td>
+                                </tr>
+                                <tr>
+                                    <td>pR9</td>
+                                    <td>Остаточний розмір ПЗ значно менший за планові його характеристики</td>
+                                </tr>
+                                <tr>
+                                    <td>pR10</td>
+                                    <td>Поява на ринку аналогічного ПЗ до виходу замовленого</td>
+                                </tr>
+                                <tr>
+                                    <td>pR11</td>
+                                    <td>Поява на ринку більш конкурентоздатного ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR1</td>
+                                    <td>Низький моральний стан персоналу команди виконавців ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR2</td>
+                                    <td>Низька взаємодія між членами команди виконавців ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR3</td>
+                                    <td>Пасивність керівника (менеджера) програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR4</td>
+                                    <td>Недостатня компетентність керівника (менеджера) програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR5</td>
+                                    <td>Незадоволеність замовника результатами етапів реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR6</td>
+                                    <td>Недостатня кількість фахівців у команді виконавців ПЗ з необхідним професійним рівнем</td>
+                                </tr>
+                                <tr>
+                                    <td>mR7</td>
+                                    <td>Хвороба провідного виконавця в найкритичніший момент розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR8</td>
+                                    <td>Одночасна хвороба декількох виконавців підчас розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR9</td>
+                                    <td>Неможливість організації необхідного навчання персоналу команди виконавців ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR10</td>
+                                    <td>Зміна пріоритетів у процесі управління програмним проектом</td>
+                                </tr>
+                                <tr>
+                                    <td>mR11</td>
+                                    <td>Недооцінювання необхідної кількості розробників (підрядників і субпідрядників) на етапах життєвого циклу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR12</td>
+                                    <td>Переоцінювання необхідної кількості розробників (підрядників і субпідрядників) на етапах життєвого циклу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR13</td>
+                                    <td>Надмірне документування результатів на етапах реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR14</td>
+                                    <td>Недостатнє документування результатів на етапах реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR15</td>
+                                    <td>Нереалістичне прогнозування результатів на етапах реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR16</td>
+                                    <td>Недостатній професійний рівень представників від компанії-замовника ПЗ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div id="req-monitoring-content2" class="tabcontent"  style="border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                <div class="ml-4" style="width: 70%;">
+                    <div class="mt-2 mb-4 justify-content-left pt-2">
+                        
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:5%">№</th>
+                                <th style="width:40%">Можливі ризикові події</th>
+                                <th style="width:10%">ERPER</th>
+                                <th style="width:10%">ELRER</th>
+                                <th style="width:10%">EVRER</th>
+                                <th style="width:25%">Пріоритет</th>
+                                </tr>
+                                <tr>
+                                    <td>tR1</td>
+                                    <td>Затримки у постачанні обладнання, необхідного для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR2</td>
+                                    <td>Затримки у постачанні інструментальних засобів, необхідних для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR3</td>
+                                    <td>Небажання команди виконавців ПЗ використовувати інструментальні засоби для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR4</td>
+                                    <td>Відмова команди виконавців від CASE-засобів розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR5</td>
+                                    <td>Формування запитів на більш потужні інструментальні засоби розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR6</td>
+                                    <td>Недостатня продуктивність баз(и) даних для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR7</td>
+                                    <td>Програмні компоненти, які використовують повторно в ПЗ, мають дефекти та обмежені функціональні можливості</td>
+                                </tr>
+                                <tr>
+                                    <td>tR8</td>
+                                    <td>Неефективність програмного коду, згенерованого CASE-засобами розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR9</td>
+                                    <td>Неможливість інтеграції CASE-засобів з іншими інструментальними засобами для підтримки процесу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>tR10</td>
+                                    <td>Швидкість виявлення дефектів у програмному коді є нижчою від раніше запланованих термінів</td>
+                                </tr>
+                                <tr>
+                                    <td>tR11</td>
+                                    <td>Поява дефектних системних компонент, які використовують для розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR1</td>
+                                    <td>Недооцінювання витрат на реалізацію програмного проекту (надмірно низька вартість)</td>
+                                </tr>
+                                <tr>
+                                    <td>cR2</td>
+                                    <td>Переоцінювання витрат на реалізацію програмного проекту (надмірно висока вартість)</td>
+                                </tr>
+                                <tr>
+                                    <td>cR3</td>
+                                    <td>Фінансові ускладнення у компанії-замовника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR4</td>
+                                    <td>Фінансові ускладнення у компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR5</td>
+                                    <td>Збільшення бюджету програмного проекта з ініціативи компанії-розробника ПЗ під час його реалізації</td>
+                                </tr>
+                                <tr>
+                                    <td>cR6</td>
+                                    <td>Збільшення бюджету програмного проекта з ініціативи компанії-розробника ПЗ під час його реалізації</td>
+                                </tr>
+                                <tr>
+                                    <td>cR7</td>
+                                    <td>Висока вартість виконання повторних робіт, необхідних для зміни вимог до ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR8</td>
+                                    <td>Реорганізація структурних підрозділів у компанії-замовника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>cR9</td>
+                                    <td>Реорганізація команди виконавців у компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR1</td>
+                                    <td>Зміни графіка виконання робіт з боку замовника чи виконавця</td>
+                                </tr>
+                                <tr>
+                                    <td>pR2</td>
+                                    <td>Порушення графіка виконання робіт у компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR3</td>
+                                    <td>Потреба зміни користувацьких вимог до ПЗ з боку компанії-замовника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR4</td>
+                                    <td>Потреба зміни функціональних вимог до ПЗ з боку компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR5</td>
+                                    <td>Потреба виконання великої кількості повторних робіт, необхідних для зміни вимог до ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR6</td>
+                                    <td>Недооцінювання тривалості етапів реалізації програмного проекту з боку компанії-розробника ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>pR7</td>
+                                    <td>Переоцінювання тривалості етапів реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>pR8</td>
+                                    <td>Остаточний розмір ПЗ перевищує заплановані його характеристики</td>
+                                </tr>
+                                <tr>
+                                    <td>pR9</td>
+                                    <td>Остаточний розмір ПЗ значно менший за планові його характеристики</td>
+                                </tr>
+                                <tr>
+                                    <td>pR10</td>
+                                    <td>Поява на ринку аналогічного ПЗ до виходу замовленого</td>
+                                </tr>
+                                <tr>
+                                    <td>pR11</td>
+                                    <td>Поява на ринку більш конкурентоздатного ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR1</td>
+                                    <td>Низький моральний стан персоналу команди виконавців ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR2</td>
+                                    <td>Низька взаємодія між членами команди виконавців ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR3</td>
+                                    <td>Пасивність керівника (менеджера) програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR4</td>
+                                    <td>Недостатня компетентність керівника (менеджера) програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR5</td>
+                                    <td>Незадоволеність замовника результатами етапів реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR6</td>
+                                    <td>Недостатня кількість фахівців у команді виконавців ПЗ з необхідним професійним рівнем</td>
+                                </tr>
+                                <tr>
+                                    <td>mR7</td>
+                                    <td>Хвороба провідного виконавця в найкритичніший момент розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR8</td>
+                                    <td>Одночасна хвороба декількох виконавців підчас розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR9</td>
+                                    <td>Неможливість організації необхідного навчання персоналу команди виконавців ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR10</td>
+                                    <td>Зміна пріоритетів у процесі управління програмним проектом</td>
+                                </tr>
+                                <tr>
+                                    <td>mR11</td>
+                                    <td>Недооцінювання необхідної кількості розробників (підрядників і субпідрядників) на етапах життєвого циклу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR12</td>
+                                    <td>Переоцінювання необхідної кількості розробників (підрядників і субпідрядників) на етапах життєвого циклу розроблення ПЗ</td>
+                                </tr>
+                                <tr>
+                                    <td>mR13</td>
+                                    <td>Надмірне документування результатів на етапах реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR14</td>
+                                    <td>Недостатнє документування результатів на етапах реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR15</td>
+                                    <td>Нереалістичне прогнозування результатів на етапах реалізації програмного проекту</td>
+                                </tr>
+                                <tr>
+                                    <td>mR16</td>
+                                    <td>Недостатній професійний рівень представників від компанії-замовника ПЗ</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 30%;">
+                    <div class="result-container">
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">min VRER:</p>
+                            <label id="min-evrer">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">max VRER:</p>
+                            <label id="max-evrer">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2"> </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Інтервали пріоритетів:</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <label id="low-priority1" class="text-left ml-2">HTML</label><br>
+                            <p>-  Низький</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <label id="middle-priority1" class="text-left ml-2">HTML</label><br>
+                            <p>-  Середній</p>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <label id="high-priority1" class="text-left ml-2">HTML</label><br>
+                            <p>-  Високий</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+                
+        </div>
+            <!-- Page Heading -->
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/reqMonitoringTable1.js"></script>
+    <script src="js/reqMonitoringTable2.js"></script>
+    <script>
+        window.onload = function() {
+            createCells();
+            calculateER();
+            createRiskMetricsCells();
+            copyERValues();
+            generateLRERValues();
+            calculateAndSetVRER();
+            findMinVRER();
+            findMaxVRER();
+            setPriorityIntervals();
+            setPriorityValues();
+        };
+        window.onchange = function() {
+            calculateER();
+            copyERValues();
+            calculateAndSetVRER();
+            findMinVRER();
+            findMaxVRER();
+            setPriorityIntervals();
+            setPriorityValues();
+        };
+    </script>
+</body>
+
+</html>

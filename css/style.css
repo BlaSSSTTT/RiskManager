@@ -1,0 +1,64 @@
+/* Загальний стиль для навігаційного контейнера
+.navbar {
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+} */
+.horizontal-navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Робимо елементи горизонтальними */
+    gap: 20px; /* Відстань між елементами */
+    flex-direction: row;
+}
+/* Стиль для горизонтального списку навігації */
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Стиль для елементів навігації */
+.nav-item {
+    margin: 0 10px;
+}
+
+/* Стиль для посилань */
+.nav-link {
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    color: #19b530;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    /* background-color: #8EAFE8; */
+}
+.nav-link:hover{
+    color: #85e934;
+}
+
+/* Ефект при наведенні на посилання */
+
+
+/* Адаптивний дизайн для мобільних пристроїв */
+@media (max-width: 768px) {
+    .horizontal-navbar {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        margin-bottom: 10px;
+    }
+}
+
+input[type="text"]{
+    border:none;
+}

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Identification of risks</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.3.0/math.min.js"></script>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/RiskManagenent.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">  
+
+</head>
+
+<body id="page-top">
+    <nav class="navbar">
+    <div class="d-flex align-items-center justify-content-center">
+        <ul class="navbar">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <div>
+                        <span style="color: rgb(35, 69, 25);"">Ідентифікація ризиків</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="RisksAnalysis.html">
+                    <div>
+                        <span>Аналіз ризиків</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="RisksPlanning.html">
+                    <div>
+                        <span>Планування ризиків</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="RisksMonitoring.html">
+                    <div>
+                        <span ">Моніторинг ризиків</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="tabs">
+        <button class="tablink" onclick="openPage('newton-fractal-content', this)" id="defaultOpen">Визначення можливих джерел появи ризиків</button>
+        <button class="tablink" onclick="openPage('vicsek-fractal-content', this)" >Ідентифікація потенційних ризикових подій</button>
+        <!-- <div style="margin-right: 2rem;"></div> -->
+    </div>
+
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <div id="newton-fractal-content" class="tabcontent"  style="border-radius: 15px;">
+                <div class="ml-4" style="width: 70%;">
+                    <div class="mt-2 mb-4 justify-content-left pt-2">
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Технічні ризики</p>
+                            <button class="select-all" onclick="selectAll1()">Select/reset all</button>
+                        </div>
+                        
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі джерела появи ризиків</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>tRS1</td>
+                                    <td>Функціональні характеристики ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS1" name="tRS1" value="tRS1"></td>
+                                </tr>
+                                <tr>
+                                    <td>tRS2</td>
+                                    <td>Характеристики якості ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS2" name="tRS2" value="tRS2"></td>
+                                </tr>
+                                <tr>
+                                    <td>tRS3</td>
+                                    <td>Характеристики надійності ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS3" name="tRS3" value="tRS3"></td>
+                                </tr>
+                                <tr>
+                                    <td>tRS4</td>
+                                    <td>Застосовність ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS4" name="tRS4" value="tRS4"></td>
+                                </tr>
+                                <tr>
+                                    <td>tRS5</td>
+                                    <td>Часова продуктивність ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS5" name="tRS5" value="tRS5"></td>
+                                </tr>
+                                <tr>
+                                    <td>tRS6</td>
+                                    <td>Супроводжуваність ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS6" name="tRS6" value="tRS6"></td>
+                                </tr>
+                                <tr>
+                                    <td>tRS7</td>
+                                    <td>Повторне використання компонент ПЗ</td>
+                                    <td> <input type="checkbox" id="tRS7" name="tRS7" value="tRS7"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Вартісні ризики</p>
+                            <button class="select-all" onclick="selectAll2()">Select/reset all</button>
+                        </div>
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі джерела появи ризиків</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>cRS1</td>
+                                    <td>Обмеження сумарного бюджету на програмний проект</td>
+                                    <td> <input type="checkbox" id="cRS1" name="cRS1" value="сRS1"></td>
+                                </tr>
+                                <tr>
+                                    <td>cRS2</td>
+                                    <td>Недоступна вартість реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="cRS2" name="cRS2" value="cRS2"></td>
+                                </tr>
+                                <tr>
+                                    <td>cRS3</td>
+                                    <td>Низька ступінь реалізму при оцінюванні витрат на програмний проект</td>
+                                    <td> <input type="checkbox" id="cRS3" name="cRS3" value="cRS3"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Планові ризики</p>
+                            <button class="select-all" onclick="selectAll3()">Select/reset all</button>
+                        </div>
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі джерела появи ризиків</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>pRS1</td>
+                                    <td>Властивості та можливості гнучкості внесення змін до планів життєвого циклу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="pRS1" name="pRS1" value="pRS1"></td>
+                                </tr>
+                                <tr>
+                                    <td>pRS2</td>
+                                    <td>Можливості порушення встановлених термінів реалізації етапів життєвого циклу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="pRS2" name="pRS2" value="pRS2"></td>
+                                </tr>
+                                <tr>
+                                    <td>pRS3</td>
+                                    <td>Низька ступінь реалізму при встановленні планів і етапів життєвого циклу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="pRS3" name="pRS3" value="pRS3"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Ризики реалізації процесів і процедур управління ПЗ</p>
+                            <button class="select-all" onclick="selectAll4()">Select/reset all</button>
+                        </div>
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі джерела появи ризиків</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>mRS1</td>
+                                    <td>Хибна стратегія реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mRS1" name="mRS1" value="mRS1"></td>
+                                </tr>
+                                <tr>
+                                    <td>mRS2</td>
+                                    <td>Неефективне планування проекту розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="mRS2" name="mRS2" value="mRS2"></td>
+                                </tr>
+                                <tr>
+                                    <td>mRS3</td>
+                                    <td>Неякісне оцінювання програмного проекту</td>
+                                    <td> <input type="checkbox" id="mRS3" name="mRS3" value="mRS3"></td>
+                                </tr>
+                                <tr>
+                                    <td>mRS4</td>
+                                    <td>Прогалини в документуванні етапів реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mRS4" name="mRS4" value="mRS4"></td>
+                                </tr>
+                                <tr>
+                                    <td>mRS5</td>
+                                    <td>Промахи в прогнозуванні результатів реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mRS5" name="mRS5" value="mRS5"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div style="display: flex; flex-direction: column; width: 30%;">
+                    <div class="result-container">
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Технічні ризики:</p>
+                            <label id="tRS-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Вартісні ризики:</p>
+                            <label id="cRS-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Планові ризики:</p>
+                            <label id="pRS-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Ризики управління:</p>
+                            <label id="mRS-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2" style="font-weight: bold;">Загалом:</p>
+                            <label id="generalRS-risk">HTML</label><br>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="vicsek-fractal-content" class="tabcontent"  style="border-radius: 30px">
+                <div class="ml-4" style="width: 70%;">
+                    <div class="mt-2 mb-4 justify-content-left pt-2">
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Технічні ризикові події</p>
+                            <button class="select-all" onclick="selectAll11()">Select/reset all</button>
+                        </div>
+                        
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі ризикові події</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>tR1</td>
+                                    <td>Затримки у постачанні обладнання, необхідного для підтримки процесу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR1" name="tR1" value="tR1"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR2</td>
+                                    <td>Затримки у постачанні інструментальних засобів, необхідних для підтримки процесу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR2" name="tR2" value="tR2"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR3</td>
+                                    <td>Небажання команди виконавців ПЗ використовувати інструментальні засоби для підтримки процесу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR3" name="tR3" value="tR3"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR4</td>
+                                    <td>Відмова команди виконавців від CASE-засобів розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR4" name="tR4" value="tR4"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR5</td>
+                                    <td>Формування запитів на більш потужні інструментальні засоби розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR5" name="tR5" value="tR5"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR6</td>
+                                    <td>Недостатня продуктивність баз(и) даних для підтримки процесу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR6" name="tR6" value="tR6"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR7</td>
+                                    <td>Програмні компоненти, які використовують повторно в ПЗ, мають дефекти та обмежені функціональні можливості</td>
+                                    <td> <input type="checkbox" id="tR7" name="tR7" value="tR7"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR8</td>
+                                    <td>Неефективність програмного коду, згенерованого CASE-засобами розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR8" name="tR8" value="tR8"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR9</td>
+                                    <td>Неможливість інтеграції CASE-засобів з іншими інструментальними засобами для підтримки процесу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR9" name="tR9" value="tR9"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR10</td>
+                                    <td>Швидкість виявлення дефектів у програмному коді є нижчою від раніше запланованих термінів</td>
+                                    <td> <input type="checkbox" id="tR10" name="tR10" value="tR10"></td>
+                                </tr>
+                                <tr>
+                                    <td>tR11</td>
+                                    <td>Поява дефектних системних компонент, які використовують для розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="tR11" name="tR11" value="tR11"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Вартісні ризикові події</p>
+                            <button class="select-all" onclick="selectAll22()">Select/reset all</button>
+                        </div>
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі ризикові події</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>cR1</td>
+                                    <td>Недооцінювання витрат на реалізацію програмного проекту (надмірно низька вартість)</td>
+                                    <td> <input type="checkbox" id="cR1" name="cR1" value="сR1"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR2</td>
+                                    <td>Переоцінювання витрат на реалізацію програмного проекту (надмірно висока вартість)</td>
+                                    <td> <input type="checkbox" id="cR2" name="cR2" value="cR2"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR3</td>
+                                    <td>Фінансові ускладнення у компанії-замовника ПЗ</td>
+                                    <td> <input type="checkbox" id="cR3" name="cR3" value="cR3"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR4</td>
+                                    <td>Фінансові ускладнення у компанії-розробника ПЗ</td>
+                                    <td> <input type="checkbox" id="cR4" name="cR4" value="cR4"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR5</td>
+                                    <td>Збільшення бюджету програмного проекта з ініціативи компанії-розробника ПЗ під час його реалізації</td>
+                                    <td> <input type="checkbox" id="cR5" name="cR5" value="cR5"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR6</td>
+                                    <td>Збільшення бюджету програмного проекта з ініціативи компанії-розробника ПЗ під час його реалізації</td>
+                                    <td> <input type="checkbox" id="cR6" name="cR6" value="cR6"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR7</td>
+                                    <td>Висока вартість виконання повторних робіт, необхідних для зміни вимог до ПЗ</td>
+                                    <td> <input type="checkbox" id="cR7" name="cR7" value="cR7"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR8</td>
+                                    <td>Реорганізація структурних підрозділів у компанії-замовника ПЗ</td>
+                                    <td> <input type="checkbox" id="cR8" name="cR8" value="cR8"></td>
+                                </tr>
+                                <tr>
+                                    <td>cR9</td>
+                                    <td>Реорганізація команди виконавців у компанії-розробника ПЗ</td>
+                                    <td> <input type="checkbox" id="cR9" name="cR9" value="cR9"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Планові ризикові події</p>
+                            <button class="select-all" onclick="selectAll33()">Select/reset all</button>
+                        </div>
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі ризикові події</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>pR1</td>
+                                    <td>Зміни графіка виконання робіт з боку замовника чи виконавця</td>
+                                    <td> <input type="checkbox" id="pR1" name="pR1" value="pR1"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR2</td>
+                                    <td>Порушення графіка виконання робіт у компанії-розробника ПЗ</td>
+                                    <td> <input type="checkbox" id="pR2" name="pR2" value="pR2"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR3</td>
+                                    <td>Потреба зміни користувацьких вимог до ПЗ з боку компанії-замовника ПЗ</td>
+                                    <td> <input type="checkbox" id="pR3" name="pR3" value="pR3"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR4</td>
+                                    <td>Потреба зміни функціональних вимог до ПЗ з боку компанії-розробника ПЗ</td>
+                                    <td> <input type="checkbox" id="pR4" name="pR4" value="pR4"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR5</td>
+                                    <td>Потреба виконання великої кількості повторних робіт, необхідних для зміни вимог до ПЗ</td>
+                                    <td> <input type="checkbox" id="pR5" name="pR5" value="pR5"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR6</td>
+                                    <td>Недооцінювання тривалості етапів реалізації програмного проекту з боку компанії-розробника ПЗ</td>
+                                    <td> <input type="checkbox" id="pR6" name="pR6" value="pR6"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR7</td>
+                                    <td>Переоцінювання тривалості етапів реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="pR7" name="pR7" value="pR7"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR8</td>
+                                    <td>Остаточний розмір ПЗ перевищує заплановані його характеристики</td>
+                                    <td> <input type="checkbox" id="pR8" name="pR8" value="pR8"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR9</td>
+                                    <td>Остаточний розмір ПЗ значно менший за планові його характеристики</td>
+                                    <td> <input type="checkbox" id="pR9" name="pR9" value="pR9"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR10</td>
+                                    <td>Поява на ринку аналогічного ПЗ до виходу замовленого</td>
+                                    <td> <input type="checkbox" id="pR10" name="pR10" value="pR10"></td>
+                                </tr>
+                                <tr>
+                                    <td>pR11</td>
+                                    <td>Поява на ринку більш конкурентоздатного ПЗ</td>
+                                    <td> <input type="checkbox" id="pR11" name="pR11" value="pR11"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left">Ризикові події реалізації процесів і процедур управління ПЗ</p>
+                            <button class="select-all" onclick="selectAll44()">Select/reset all</button>
+                        </div>
+                        <div class="table-container">
+                            <table style="width:100%">
+                                <tr>
+                                <th style="width:10%">№</th>
+                                <th style="width:80%">Можливі ризикові події</th>
+                                <th style="width:10%">Значення</th>
+                                </tr>
+                                <tr>
+                                    <td>mR1</td>
+                                    <td>Низький моральний стан персоналу команди виконавців ПЗ</td>
+                                    <td> <input type="checkbox" id="mR1" name="mR1" value="mR1"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR2</td>
+                                    <td>Низька взаємодія між членами команди виконавців ПЗ</td>
+                                    <td> <input type="checkbox" id="mR2" name="mR2" value="mR2"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR3</td>
+                                    <td>Пасивність керівника (менеджера) програмного проекту</td>
+                                    <td> <input type="checkbox" id="mR3" name="mR3" value="mR3"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR4</td>
+                                    <td>Недостатня компетентність керівника (менеджера) програмного проекту</td>
+                                    <td> <input type="checkbox" id="mR4" name="mR4" value="mR4"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR5</td>
+                                    <td>Незадоволеність замовника результатами етапів реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mR5" name="mR5" value="mR5"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR6</td>
+                                    <td>Недостатня кількість фахівців у команді виконавців ПЗ з необхідним професійним рівнем</td>
+                                    <td> <input type="checkbox" id="mR6" name="mR6" value="mR6"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR7</td>
+                                    <td>Хвороба провідного виконавця в найкритичніший момент розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="mR7" name="mR7" value="mR7"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR8</td>
+                                    <td>Одночасна хвороба декількох виконавців підчас розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="mR8" name="mR8" value="mR8"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR9</td>
+                                    <td>Неможливість організації необхідного навчання персоналу команди виконавців ПЗ</td>
+                                    <td> <input type="checkbox" id="mR9" name="mR9" value="mR9"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR10</td>
+                                    <td>Зміна пріоритетів у процесі управління програмним проектом</td>
+                                    <td> <input type="checkbox" id="mR10" name="mR10" value="mR10"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR11</td>
+                                    <td>Недооцінювання необхідної кількості розробників (підрядників і субпідрядників) на етапах життєвого циклу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="mR11" name="mR11" value="mR11"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR12</td>
+                                    <td>Переоцінювання необхідної кількості розробників (підрядників і субпідрядників) на етапах життєвого циклу розроблення ПЗ</td>
+                                    <td> <input type="checkbox" id="mR12" name="mR12" value="mR12"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR13</td>
+                                    <td>Надмірне документування результатів на етапах реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mR13" name="mR13" value="mR13"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR14</td>
+                                    <td>Недостатнє документування результатів на етапах реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mR14" name="mR14" value="mR14"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR15</td>
+                                    <td>Нереалістичне прогнозування результатів на етапах реалізації програмного проекту</td>
+                                    <td> <input type="checkbox" id="mR15" name="mR15" value="mR15"></td>
+                                </tr>
+                                <tr>
+                                    <td>mR16</td>
+                                    <td>Недостатній професійний рівень представників від компанії-замовника ПЗ</td>
+                                    <td> <input type="checkbox" id="mR16" name="mR16" value="mR16"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 30%;">
+                    <div class="result-container">
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Технічні ризикові події:</p>
+                            <label id="tR-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Вартісні ризикові події:</p>
+                            <label id="cR-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Планові ризикові події:</p>
+                            <label id="pR-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2">Ризикові події управління:</p>
+                            <label id="mR-risk">HTML</label><br>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <p class="text-left ml-2" style="font-weight: bold;">Загалом:</p>
+                            <label id="generalR-risk">HTML</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Heading -->
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/checkSourcesRisk.js"></script>
+    <script src="js/checkRiskEvents.js"></script>
+    <script>
+        window.onload = function() {
+            calculateRisks();
+            calculateRisks2();
+        };
+        window.onchange = function() {
+            calculateRisks();
+            calculateRisks2();
+        };
+    </script>
+</body>
+
+</html>
